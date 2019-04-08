@@ -5,6 +5,21 @@
 .video{
   height: 400px;
   width : 400px;
+  border-style: solid;
+  border-color: orange;
+}
+
+#video_principal{
+  border-style: solid;
+  border-color: orange;
+}
+
+.boton{
+  background-color: grey;
+  color: orange;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 body{
