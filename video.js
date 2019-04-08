@@ -10,6 +10,8 @@ function main()
   boton1 = document.getElementById("boton1")
   boton2 = document.getElementById("boton2")
   boton3 = document.getElementById("boton3")
+  boton_bucle_SI = document.getElementById("bucle_SI")
+  boton_bucle_No = document.getElementById("bucle_NO")
 
 //video 1
   video1.onmouseover = () => {
@@ -52,6 +54,10 @@ function main()
   boton3.onclick = () => {
      video_principal.src = "anillo.mp4";
      video_principal.currentTime = video3.currentTime;
+  }
+
+  boton_bucle_SI.onclick = () => {
+    
   }
 
 }
