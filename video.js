@@ -57,7 +57,11 @@ function main()
   }
 
   boton_bucle_SI.onclick = () => {
-    
+    video_principal.loop = true;
+  }
+
+  boton_bucle_No.onclick = () => {
+    video_principal.loop = false;
   }
 
 }
