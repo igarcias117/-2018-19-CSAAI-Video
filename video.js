@@ -28,6 +28,8 @@ function main()
   final2ON = false;
   final3ON = false;
 
+  timer = null;
+
 //video 1
   video1.onmouseover = () => {
     video1.muted = false;
@@ -140,12 +142,23 @@ function main()
     }
   }
 
+  if (!timer) {
+    timer = setInterval( () => {
+      if (final1ON && video_principal.currentTime >= 127) {
+        reset();
+      } else if (final2ON && video_principal.currentTime >= 90) {
+        reset();
+      } else if (final3ON && video_principal.currentTime >= 70) {
+        reset();
+      }
+    }, 100)
+  }
 
 //video video_principal
   boton1.onclick = () => {
-     video_principal.src = "Halo4.mp4";
-     video_principal.currentTime = video1.currentTime;
-   }
+    video_principal.src = "Halo4.mp4";
+    video_principal.currentTime = video1.currentTime;
+  }
 
   boton2.onclick = () => {
      video_principal.src = "OP.mp4";
@@ -156,13 +169,5 @@ function main()
      video_principal.src = "anillo.mp4";
      video_principal.currentTime = video3.currentTime;
   }
-
-//  boton_bucle_SI.onclick = () => {
-  //  video_principal.loop = true;
-//  }
-
-  //boton_bucle_No.onclick = () => {
-    //video_principal.loop = false;
-  //}
 
 }
